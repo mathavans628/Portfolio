@@ -1,0 +1,163 @@
+/* Ensure Full Page Layout */
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Ensure footer stays at the bottom */
+}
+
+/* Contact Section */
+#contact {
+    background: var(--background-color);
+    width: 100%;
+    height: 100%;
+    min-height: 20vh;
+    /* Set contact section height to 20vh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--container-padding);
+    text-align: center;
+    margin-top: -4.5rem;
+    margin-bottom: 0;
+    /* Remove bottom margin */
+}
+
+/* Section Title */
+.contact-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+/* Contact Info Container */
+.contact-info {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    animation: fadeIn 1s ease-in-out;
+    margin: 0 auto;
+    margin-top: -2rem;
+    margin-left: 42rem;
+}
+
+/* Contact Info Items */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    margin: 0.3rem 0;
+    width: 100%;
+}
+
+/* Contact Icons */
+.contact-info svg {
+    color: var(--primary-color);
+    min-width: 24px;
+}
+
+/* Email Link */
+.contact-info a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: var(--button-hover-color);
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-title {
+        font-size: 1.8rem;
+        margin-top: 5rem;
+        /* Adjusted to prevent overflow */
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+        width: 90%; /* Adjusted width to avoid overflow */
+        max-width: 800px;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto; /* Centers the section */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Adds spacing between items */
+    }
+
+    .contact-info p {
+        font-size: 1.1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1.8rem;
+        margin-top: 5rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+        width: 95%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contact-info p strong {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 1.6rem; /* Slightly smaller title for better fit */
+        margin-top: 4rem; /* Reduced margin for better spacing */
+    }
+
+    .contact-info {
+        padding: 1rem;
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-info svg {
+        min-width: 20px;
+    }
+}

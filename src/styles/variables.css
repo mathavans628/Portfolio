@@ -1,0 +1,22 @@
+:root {
+    --background-color: #E9DDFF;
+    --text-color: #000000; /* Darker for better readability */
+    --primary-color: #4B259C; /* More consistent with the gradient */
+    --button-color: #055BDB;
+    --button-text-color: #FFFFFF;
+    --navbar-bg: #ffffff;
+    --navbar-menu-option-bg: #FFF1E6;
+    --gradient-start: #034FC2;
+    --gradient-end: #4A90E2; /* Softer blue for a smooth blend */
+}
+
+[data-theme="dark"] {
+    --background-color: #121826; /* Darker for deeper contrast */
+    --text-color: #E0E6F0; /* Softer white for less eye strain */
+    --primary-color: #5C88C4;
+    --secondary-color: #F4A240;
+    --navbar-bg: rgba(18, 24, 38, 0.9); /* Darker navbar */
+    --navbar-menu-option-bg: #2A3245;
+    --gradient-start: #1E3A8A; /* Richer dark blue */
+    --gradient-end: #5C88C4; /* Softer transition */
+}

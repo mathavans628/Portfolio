@@ -1,0 +1,74 @@
+@import './variables.css';
+
+/* Global Responsive Layout */
+:root {
+    --container-padding: 2rem;
+}
+
+/* Extra Small Screens (Mobile) */
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 0.75rem;
+    }
+
+    body {
+        font-size: 0.875rem;
+        /* Equivalent to var(--font-size-sm) */
+    }
+
+    button,
+    input {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        min-width: 120px;
+        /* Ensures buttons are tap-friendly */
+    }
+}
+
+/* Small Screens (Tablets & Small Laptops) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+        /* Equivalent to var(--font-size-md) */
+    }
+
+    .container {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    button,
+    input {
+        font-size: 1rem;
+    }
+}
+
+/* Medium to Large Screens (Desktops) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+}
+
+/* Navbar Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+}

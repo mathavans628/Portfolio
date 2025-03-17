@@ -1,0 +1,86 @@
+@import './variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, var(--background-color), var(--secondary-color));
+    color: var(--text-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Improved readability */
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.8;
+    /* Better spacing */
+}
+
+.container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* padding: var(--container-padding); */
+}
+
+#contact{
+    min-height: 20vh;
+}
+
+:root {
+    --container-padding: 1rem;
+    --font-size-base: 1.1rem;
+    /* Slightly larger base font */
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 1rem;
+        --font-size-base: 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --container-padding: 1.5rem;
+        --font-size-base: 1.05rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --container-padding: 2rem;
+        --font-size-base: 1.1rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --container-padding: 3rem;
+        --font-size-base: 1.1rem;
+    }
+}
